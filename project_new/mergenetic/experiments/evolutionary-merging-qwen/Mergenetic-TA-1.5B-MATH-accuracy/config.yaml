@@ -1,0 +1,10 @@
+base_model: /leonardo_scratch/fast/IscrC_LENS/miacobel/model/DeepSeek-R1-Distill-Qwen-1.5B
+dtype: bfloat16
+merge_method: task_arithmetic
+models:
+- model: /leonardo_scratch/fast/IscrC_LENS/miacobel/model/DeepSeek-R1-Distill-Qwen-1.5B
+- model: /leonardo_scratch/fast/IscrC_LENS/miacobel/model/Qwen2.5-Math-1.5B
+  parameters:
+    weight: 0.25663040241015567
+parameters:
+  int8_mask: true

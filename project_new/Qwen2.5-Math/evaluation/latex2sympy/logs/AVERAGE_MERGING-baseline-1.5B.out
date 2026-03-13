@@ -1,0 +1,37 @@
++ PROMPT_TYPE=deepseek-math
++ MODEL_NAME_OR_PATH=/leonardo_scratch/fast/IscrC_M4R/miacobel/model/AVERAGE_MERGING-1.5B
++ MAX_TOKEN=10240
++ NUM_SHOTS=0
++ DATASETS=aime24,college_math,gsm8k,math500,minerva_math,olympiadbench
++ OUTPUT_DIR=./outputs/AVERAGE_MERGING-baseline-1.5B
++ SEED=0
++ SPLIT=test
++ NUM_TEST_SAMPLE=-1
++ DATA_NAME=aime24,college_math,gsm8k,math500,minerva_math,olympiadbench
++ TOKENIZERS_PARALLELISM=false
++ python3 -u math_eval.py --model_name_or_path /leonardo_scratch/fast/IscrC_M4R/miacobel/model/AVERAGE_MERGING-1.5B --data_name aime24,college_math,gsm8k,math500,minerva_math,olympiadbench --output_dir ./outputs/AVERAGE_MERGING-baseline-1.5B --split test --prompt_type deepseek-math --num_test_sample -1 --seed 0 --temperature 0 --n_sampling 1 --max_tokens_per_call 10240 --top_p 1 --start 0 --end -1 --use_vllm --num_shots 0 --overwrite --save_outputs
+INFO 11-03 23:25:15 [__init__.py:235] Automatically detected platform cuda.
+Random seed set as 0
+Traceback (most recent call last):
+  File "/leonardo/home/userexternal/miacobel/project_new/Qwen2.5-Math/evaluation/math_eval.py", line 408, in <module>
+    setup(args)
+  File "/leonardo/home/userexternal/miacobel/project_new/Qwen2.5-Math/evaluation/math_eval.py", line 111, in setup
+    llm = LLM(
+          ^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 273, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 490, in from_engine_args
+    vllm_config = engine_args.create_engine_config(usage_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 1004, in create_engine_config
+    model_config = self.create_model_config()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/engine/arg_utils.py", line 872, in create_model_config
+    return ModelConfig(
+           ^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+    s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ModelConfig
+  Value error, User-specified max_model_len (10240) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 [type=value_error, input_value=ArgsKwargs((), {'model': ...attention_dtype': None}), input_type=ArgsKwargs]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error

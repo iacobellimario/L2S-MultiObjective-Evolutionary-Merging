@@ -1,0 +1,146 @@
+PROJECT_ROOT IS HARCODED AT /leonardo/home/userexternal/miacobel
+INFO 11-06 18:41:59 [__init__.py:235] Automatically detected platform cuda.
+PROJECT_ROOT IS HARCODED AT /leonardo/home/userexternal/miacobel
+✅ Loaded mergenetic from: /leonardo/home/userexternal/miacobel/project_new/mergenetic/src/mergenetic/__init__.py
+All seeds set to 0
+✅ Qwen evaluation configured: datasets=['gsm8k'], K=20, output_root=/leonardo/home/userexternal/miacobel/mergenetic/qwen_outputs/Mergenetic-TA-RANDOM-14B
+Warmup loader cache:   0%|          | 0/2 [00:00<?, ?it/s]Warmup loader cache: 100%|██████████| 2/2 [00:00<00:00, 519.61it/s]
+Executing graph:   0%|          | 0/2897 [00:00<?, ?it/s]Executing graph:   0%|          | 2/2897 [00:00<20:27,  2.36it/s]Executing graph:   0%|          | 3/2897 [00:01<24:10,  2.00it/s]Executing graph:   0%|          | 5/2897 [00:01<15:42,  3.07it/s]Executing graph:   0%|          | 7/2897 [00:02<15:32,  3.10it/s]Executing graph:   0%|          | 8/2897 [00:03<19:09,  2.51it/s]Executing graph:   1%|          | 17/2897 [00:03<05:08,  9.32it/s]Executing graph:   1%|          | 22/2897 [00:03<03:41, 12.95it/s]Executing graph:   1%|          | 27/2897 [00:03<02:46, 17.24it/s]Executing graph:   2%|▏         | 48/2897 [00:03<01:04, 44.19it/s]Executing graph:   3%|▎         | 77/2897 [00:03<00:36, 77.65it/s]Executing graph:   3%|▎         | 89/2897 [00:04<00:44, 63.06it/s]Executing graph:   4%|▍         | 118/2897 [00:04<00:28, 96.52it/s]Executing graph:   5%|▍         | 137/2897 [00:04<00:26, 103.51it/s]Executing graph:   5%|▌         | 151/2897 [00:04<00:36, 76.10it/s] Executing graph:   6%|▌         | 173/2897 [00:04<00:27, 98.87it/s]Executing graph:   7%|▋         | 197/2897 [00:04<00:24, 109.03it/s]Executing graph:   7%|▋         | 211/2897 [00:13<06:23,  7.01it/s] Executing graph:   8%|▊         | 237/2897 [00:13<04:00, 11.07it/s]Executing graph:   9%|▊         | 253/2897 [00:13<03:03, 14.39it/s]Executing graph:   9%|▉         | 268/2897 [00:13<02:33, 17.09it/s]Executing graph:  10%|█         | 297/2897 [00:13<01:33, 27.69it/s]Executing graph:  11%|█         | 317/2897 [00:14<01:11, 36.08it/s]Executing graph:  11%|█▏        | 333/2897 [00:14<01:05, 39.17it/s]Executing graph:  12%|█▏        | 357/2897 [00:14<00:47, 53.96it/s]Executing graph:  13%|█▎        | 377/2897 [00:14<00:38, 66.21it/s]Executing graph:  14%|█▎        | 392/2897 [00:14<00:40, 61.16it/s]Executing graph:  14%|█▍        | 418/2897 [00:15<00:29, 83.63it/s]Executing graph:  15%|█▌        | 438/2897 [00:15<00:26, 91.43it/s]Executing graph:  16%|█▌        | 452/2897 [00:15<00:30, 80.27it/s]Executing graph:  16%|█▋        | 478/2897 [00:15<00:23, 104.93it/s]Executing graph:  17%|█▋        | 497/2897 [00:15<00:20, 116.52it/s]Executing graph:  18%|█▊        | 513/2897 [00:16<00:26, 89.24it/s] Executing graph:  19%|█▊        | 538/2897 [00:16<00:20, 112.45it/s]Executing graph:  19%|█▉        | 558/2897 [00:16<00:20, 114.16it/s]Executing graph:  20%|█▉        | 572/2897 [00:16<00:25, 92.72it/s] Executing graph:  21%|██        | 598/2897 [00:16<00:19, 118.20it/s]Executing graph:  21%|██▏       | 617/2897 [00:16<00:19, 117.94it/s]Executing graph:  22%|██▏       | 631/2897 [00:17<00:27, 83.18it/s] Executing graph:  23%|██▎       | 657/2897 [00:17<00:20, 110.72it/s]Executing graph:  23%|██▎       | 677/2897 [00:17<00:18, 117.49it/s]Executing graph:  24%|██▍       | 692/2897 [00:17<00:25, 87.07it/s] Executing graph:  25%|██▍       | 718/2897 [00:17<00:19, 111.31it/s]Executing graph:  25%|██▌       | 737/2897 [00:18<00:18, 114.93it/s]Executing graph:  26%|██▌       | 751/2897 [00:25<04:27,  8.02it/s] Executing graph:  27%|██▋       | 777/2897 [00:25<02:48, 12.61it/s]Executing graph:  28%|██▊       | 797/2897 [00:25<02:02, 17.15it/s]Executing graph:  28%|██▊       | 811/2897 [00:25<01:44, 19.95it/s]Executing graph:  29%|██▉       | 837/2897 [00:25<01:07, 30.45it/s]Executing graph:  30%|██▉       | 857/2897 [00:26<00:50, 40.27it/s]Executing graph:  30%|███       | 874/2897 [00:26<00:47, 42.50it/s]Executing graph:  31%|███       | 897/2897 [00:26<00:34, 58.41it/s]Executing graph:  32%|███▏      | 917/2897 [00:26<00:28, 70.62it/s]Executing graph:  32%|███▏      | 933/2897 [00:26<00:30, 64.69it/s]Executing graph:  33%|███▎      | 957/2897 [00:27<00:22, 86.56it/s]Executing graph:  34%|███▎      | 977/2897 [00:27<00:19, 97.71it/s]Executing graph:  34%|███▍      | 993/2897 [00:27<00:23, 79.99it/s]Executing graph:  35%|███▌      | 1017/2897 [00:27<00:18, 103.40it/s]Executing graph:  36%|███▌      | 1037/2897 [00:27<00:15, 118.65it/s]Executing graph:  36%|███▋      | 1054/2897 [00:28<00:21, 86.94it/s] Executing graph:  37%|███▋      | 1077/2897 [00:28<00:16, 109.70it/s]Executing graph:  38%|███▊      | 1097/2897 [00:28<00:15, 116.64it/s]Executing graph:  38%|███▊      | 1113/2897 [00:28<00:20, 88.26it/s] Executing graph:  39%|███▉      | 1137/2897 [00:28<00:15, 112.26it/s]Executing graph:  40%|███▉      | 1155/2897 [00:28<00:13, 124.78it/s]Executing graph:  40%|████      | 1172/2897 [00:29<00:21, 80.25it/s] Executing graph:  41%|████▏     | 1197/2897 [00:29<00:16, 104.96it/s]Executing graph:  42%|████▏     | 1217/2897 [00:29<00:14, 113.25it/s]Executing graph:  43%|████▎     | 1233/2897 [00:29<00:19, 87.29it/s] Executing graph:  43%|████▎     | 1257/2897 [00:29<00:14, 111.19it/s]Executing graph:  44%|████▍     | 1273/2897 [00:30<00:13, 116.50it/s]Executing graph:  44%|████▍     | 1288/2897 [00:38<04:04,  6.59it/s] Executing graph:  45%|████▌     | 1316/2897 [00:38<02:26, 10.82it/s]Executing graph:  46%|████▌     | 1337/2897 [00:38<01:44, 14.91it/s]Executing graph:  47%|████▋     | 1352/2897 [00:39<01:26, 17.81it/s]Executing graph:  48%|████▊     | 1377/2897 [00:39<00:57, 26.58it/s]Executing graph:  48%|████▊     | 1397/2897 [00:39<00:43, 34.59it/s]Executing graph:  49%|████▊     | 1412/2897 [00:39<00:40, 36.48it/s]Executing graph:  50%|████▉     | 1437/2897 [00:40<00:27, 52.40it/s]Executing graph:  50%|█████     | 1457/2897 [00:40<00:22, 63.21it/s]Executing graph:  51%|█████     | 1472/2897 [00:40<00:24, 58.74it/s]Executing graph:  52%|█████▏    | 1497/2897 [00:40<00:17, 80.38it/s]Executing graph:  52%|█████▏    | 1517/2897 [00:40<00:14, 95.15it/s]Executing graph:  53%|█████▎    | 1533/2897 [00:41<00:17, 75.94it/s]Executing graph:  54%|█████▎    | 1557/2897 [00:41<00:13, 98.68it/s]Executing graph:  54%|█████▍    | 1577/2897 [00:41<00:11, 112.62it/s]Executing graph:  55%|█████▍    | 1593/2897 [00:41<00:15, 83.11it/s] Executing graph:  56%|█████▌    | 1617/2897 [00:41<00:12, 106.24it/s]Executing graph:  57%|█████▋    | 1637/2897 [00:41<00:11, 108.47it/s]Executing graph:  57%|█████▋    | 1652/2897 [00:42<00:15, 79.48it/s] Executing graph:  58%|█████▊    | 1676/2897 [00:42<00:11, 103.89it/s]Executing graph:  59%|█████▊    | 1697/2897 [00:42<00:11, 108.66it/s]Executing graph:  59%|█████▉    | 1712/2897 [00:42<00:14, 83.48it/s] Executing graph:  60%|█████▉    | 1737/2897 [00:42<00:10, 107.20it/s]Executing graph:  61%|██████    | 1757/2897 [00:43<00:10, 113.88it/s]Executing graph:  61%|██████    | 1772/2897 [00:43<00:13, 85.53it/s] Executing graph:  62%|██████▏   | 1797/2897 [00:43<00:10, 109.64it/s]Executing graph:  63%|██████▎   | 1817/2897 [00:43<00:09, 115.21it/s]Executing graph:  63%|██████▎   | 1832/2897 [00:52<02:35,  6.85it/s] Executing graph:  64%|██████▍   | 1857/2897 [00:52<01:38, 10.56it/s]Executing graph:  65%|██████▍   | 1877/2897 [00:52<01:10, 14.55it/s]Executing graph:  65%|██████▌   | 1892/2897 [00:53<00:58, 17.31it/s]Executing graph:  66%|██████▌   | 1917/2897 [00:53<00:37, 25.96it/s]Executing graph:  67%|██████▋   | 1937/2897 [00:53<00:27, 34.45it/s]Executing graph:  67%|██████▋   | 1952/2897 [00:53<00:26, 36.24it/s]Executing graph:  68%|██████▊   | 1977/2897 [00:53<00:17, 51.88it/s]Executing graph:  69%|██████▉   | 1997/2897 [00:53<00:14, 63.00it/s]Executing graph:  69%|██████▉   | 2012/2897 [00:54<00:15, 58.84it/s]Executing graph:  70%|███████   | 2037/2897 [00:54<00:10, 79.82it/s]Executing graph:  71%|███████   | 2052/2897 [00:54<00:09, 85.59it/s]Executing graph:  71%|███████▏  | 2066/2897 [00:54<00:12, 68.44it/s]Executing graph:  72%|███████▏  | 2077/2897 [00:54<00:11, 72.06it/s]Executing graph:  72%|███████▏  | 2097/2897 [00:54<00:08, 90.44it/s]Executing graph:  73%|███████▎  | 2117/2897 [00:55<00:07, 99.67it/s]Executing graph:  74%|███████▎  | 2130/2897 [00:55<00:10, 70.39it/s]Executing graph:  74%|███████▍  | 2151/2897 [00:55<00:08, 92.11it/s]Executing graph:  75%|███████▌  | 2175/2897 [00:55<00:06, 118.79it/s]Executing graph:  76%|███████▌  | 2192/2897 [00:56<00:08, 78.92it/s] Executing graph:  77%|███████▋  | 2217/2897 [00:56<00:06, 101.40it/s]Executing graph:  77%|███████▋  | 2237/2897 [00:56<00:06, 107.74it/s]Executing graph:  78%|███████▊  | 2252/2897 [00:56<00:07, 81.58it/s] Executing graph:  79%|███████▊  | 2275/2897 [00:56<00:05, 104.72it/s]Executing graph:  79%|███████▉  | 2297/2897 [00:57<00:05, 106.86it/s]Executing graph:  80%|███████▉  | 2311/2897 [00:57<00:08, 68.60it/s] Executing graph:  80%|████████  | 2327/2897 [00:57<00:07, 79.73it/s]Executing graph:  81%|████████  | 2339/2897 [00:57<00:07, 78.01it/s]Executing graph:  81%|████████▏ | 2357/2897 [00:57<00:06, 83.26it/s]Executing graph:  82%|████████▏ | 2368/2897 [01:07<01:43,  5.11it/s]Executing graph:  82%|████████▏ | 2388/2897 [01:07<01:04,  7.91it/s]Executing graph:  83%|████████▎ | 2408/2897 [01:07<00:41, 11.77it/s]Executing graph:  84%|████████▎ | 2421/2897 [01:07<00:32, 14.73it/s]Executing graph:  84%|████████▍ | 2433/2897 [01:07<00:26, 17.30it/s]Executing graph:  84%|████████▍ | 2447/2897 [01:08<00:19, 22.85it/s]Executing graph:  85%|████████▍ | 2458/2897 [01:08<00:15, 28.01it/s]Executing graph:  86%|████████▌ | 2477/2897 [01:08<00:10, 39.95it/s]Executing graph:  86%|████████▌ | 2488/2897 [01:08<00:10, 38.57it/s]Executing graph:  87%|████████▋ | 2508/2897 [01:08<00:07, 54.83it/s]Executing graph:  87%|████████▋ | 2527/2897 [01:08<00:05, 72.37it/s]Executing graph:  88%|████████▊ | 2541/2897 [01:09<00:05, 63.16it/s]Executing graph:  88%|████████▊ | 2552/2897 [01:09<00:07, 46.70it/s]Executing graph:  89%|████████▊ | 2567/2897 [01:09<00:05, 58.97it/s]Executing graph:  89%|████████▉ | 2578/2897 [01:09<00:04, 66.22it/s]Executing graph:  90%|████████▉ | 2597/2897 [01:09<00:03, 81.36it/s]Executing graph:  90%|█████████ | 2609/2897 [01:10<00:04, 61.52it/s]Executing graph:  91%|█████████ | 2630/2897 [01:10<00:03, 84.41it/s]Executing graph:  92%|█████████▏| 2652/2897 [01:10<00:02, 108.46it/s]Executing graph:  92%|█████████▏| 2668/2897 [01:10<00:03, 69.77it/s] Executing graph:  93%|█████████▎| 2688/2897 [01:11<00:02, 88.73it/s]Executing graph:  94%|█████████▎| 2709/2897 [01:11<00:01, 109.42it/s]Executing graph:  94%|█████████▍| 2726/2897 [01:11<00:02, 80.00it/s] Executing graph:  95%|█████████▍| 2739/2897 [01:11<00:01, 83.44it/s]Executing graph:  95%|█████████▌| 2757/2897 [01:11<00:01, 97.34it/s]Executing graph:  96%|█████████▌| 2777/2897 [01:11<00:01, 104.59it/s]Executing graph:  96%|█████████▋| 2790/2897 [01:12<00:01, 75.84it/s] Executing graph:  97%|█████████▋| 2812/2897 [01:12<00:00, 99.37it/s]Executing graph:  98%|█████████▊| 2833/2897 [01:12<00:00, 120.07it/s]Executing graph:  98%|█████████▊| 2849/2897 [01:12<00:00, 77.32it/s] Executing graph:  99%|█████████▉| 2872/2897 [01:12<00:00, 100.61it/s]Executing graph: 100%|█████████▉| 2892/2897 [01:13<00:00, 109.13it/s]Executing graph: 100%|██████████| 2897/2897 [01:20<00:00, 36.18it/s] 
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:08,  1.62s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:03<00:06,  1.64s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:04<00:04,  1.64s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:06<00:03,  1.64s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:08<00:01,  1.65s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:09<00:00,  1.67s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:09<00:00,  1.66s/it]
+MODEL_PATH: /leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B
+/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/bin/python math_eval.py --model_name_or_path /leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B --data_names gsm8k --prompt_type deepseek-math --max_tokens_per_call 10240 --num_test_sample 20 --n_sampling 1 --split train --seed 0 --output_dir /leonardo/home/userexternal/miacobel/mergenetic/qwen_outputs/Mergenetic-TA-RANDOM-14B --save_outputs --overwrite --use_safetensors --use_vllm
+INFO 11-06 18:43:47 [__init__.py:235] Automatically detected platform cuda.
+Random seed set as 0
+INFO 11-06 18:44:02 [config.py:1604] Using max model len 10240
+WARNING 11-06 18:44:02 [arg_utils.py:1690] --kv-cache-dtype is not supported by the V1 Engine. Falling back to V0. 
+INFO 11-06 18:44:02 [config.py:1733] Using fp8 data type to store kv cache. It reduces the GPU memory footprint and boosts the performance. Meanwhile, it may cause accuracy drop without a proper scaling factor.
+INFO 11-06 18:44:02 [llm_engine.py:228] Initializing a V0 LLM engine (v0.10.0) with config: model='/leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B', speculative_config=None, tokenizer='/leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=10240, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=fp8,  device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":256,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 11-06 18:44:04 [cuda.py:379] Cannot use FlashAttention backend for FP8 KV cache.
+WARNING 11-06 18:44:04 [cuda.py:381] Please use FlashInfer backend with FP8 KV Cache for better performance by setting environment variable VLLM_ATTENTION_BACKEND=FLASHINFER
+INFO 11-06 18:44:04 [cuda.py:395] Using XFormers backend.
+INFO 11-06 18:44:05 [parallel_state.py:1102] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 11-06 18:44:05 [model_runner.py:1083] Starting to load model /leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B...
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/Qwen2.5-Math/evaluation/math_eval.py", line 409, in <module>
+[rank0]:     setup(args)
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/Qwen2.5-Math/evaluation/math_eval.py", line 111, in setup
+[rank0]:     llm = LLM(
+[rank0]:           ^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 273, in __init__
+[rank0]:     self.llm_engine = LLMEngine.from_engine_args(
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 497, in from_engine_args
+[rank0]:     return engine_cls.from_vllm_config(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 473, in from_vllm_config
+[rank0]:     return cls(
+[rank0]:            ^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 263, in __init__
+[rank0]:     self.model_executor = executor_class(vllm_config=vllm_config)
+[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/executor/executor_base.py", line 53, in __init__
+[rank0]:     self._init_executor()
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py", line 49, in _init_executor
+[rank0]:     self.collective_rpc("load_model")
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py", line 58, in collective_rpc
+[rank0]:     answer = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/utils/__init__.py", line 2985, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/worker/worker.py", line 211, in load_model
+[rank0]:     self.model_runner.load_model()
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1086, in load_model
+[rank0]:     self.model = get_model(vllm_config=self.vllm_config)
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 59, in get_model
+[rank0]:     return loader.load_model(vllm_config=vllm_config,
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/model_loader/base_loader.py", line 44, in load_model
+[rank0]:     model = initialize_model(vllm_config=vllm_config,
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/model_loader/utils.py", line 67, in initialize_model
+[rank0]:     return model_class(vllm_config=vllm_config, prefix=prefix)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 447, in __init__
+[rank0]:     self.model = Qwen2Model(vllm_config=vllm_config,
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/compilation/decorators.py", line 183, in __init__
+[rank0]:     old_init(self, vllm_config=vllm_config, prefix=prefix, **kwargs)
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 316, in __init__
+[rank0]:     self.start_layer, self.end_layer, self.layers = make_layers(
+[rank0]:                                                     ^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 639, in make_layers
+[rank0]:     [PPMissingLayer() for _ in range(start_layer)] + [
+[rank0]:                                                      ^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 640, in <listcomp>
+[rank0]:     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 318, in <lambda>
+[rank0]:     lambda prefix: decoder_layer_type(config=config,
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 215, in __init__
+[rank0]:     self.self_attn = Qwen2Attention(
+[rank0]:                      ^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 136, in __init__
+[rank0]:     self.qkv_proj = QKVParallelLinear(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 952, in __init__
+[rank0]:     super().__init__(input_size=input_size,
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 510, in __init__
+[rank0]:     self.quant_method.create_weights(
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 192, in create_weights
+[rank0]:     weight = Parameter(torch.empty(sum(output_partition_sizes),
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/torch/utils/_device.py", line 104, in __torch_function__
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 70.00 MiB. GPU 0 has a total capacity of 63.42 GiB of which 70.38 MiB is free. Process 1005739 has 56.16 GiB memory in use. Including non-PyTorch memory, this process has 7.18 GiB memory in use. Of the allocated memory 6.62 GiB is allocated by PyTorch, and 15.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]:[W1106 18:44:06.931316801 ProcessGroupNCCL.cpp:1479] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Traceback (most recent call last):
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic/scripts/Mergenetic-TA-qwen.py", line 167, in <module>
+    result_df = searcher.search()
+                ^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic/src/mergenetic/searcher/searcher.py", line 35, in search
+    result = minimize(
+             ^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/optimize.py", line 67, in minimize
+    res = algorithm.run()
+          ^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/algorithm.py", line 138, in run
+    self.next()
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/algorithm.py", line 158, in next
+    self.evaluator.eval(self.problem, infills, algorithm=self)
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/evaluator.py", line 69, in eval
+    self._eval(problem, pop[I], evaluate_values_of, **kwargs)
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/evaluator.py", line 90, in _eval
+    out = problem.evaluate(X, return_values_of=evaluate_values_of, return_as_dictionary=True, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/problem.py", line 257, in evaluate
+    _out = self.do(X, return_values_of, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/problem.py", line 297, in do
+    self._evaluate_elementwise(X, out, *args, **kwargs)
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/problem.py", line 315, in _evaluate_elementwise
+    elems = self.elementwise_runner(f, X)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/problem.py", line 32, in __call__
+    return [f(x) for x in X]
+           ^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/problem.py", line 32, in <listcomp>
+    return [f(x) for x in X]
+            ^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/lib/python3.11/site-packages/pymoo/core/problem.py", line 25, in __call__
+    self.problem._evaluate(x, out, *self.args, **self.kwargs)
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic/src/mergenetic/optimization/merging_problem.py", line 179, in _evaluate
+    f, description = self.metrics_4_genotype(model, tokenizer)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic/src/mergenetic/optimization/predefined_problems.py", line 620, in metrics_4_genotype
+    evaluator.evaluate(model_path)
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic/src/mergenetic/evaluation/qwen_evaluator.py", line 88, in evaluate
+    self._run_math_eval(model_path, datasets_str)
+  File "/leonardo/home/userexternal/miacobel/project_new/mergenetic/src/mergenetic/evaluation/qwen_evaluator.py", line 65, in _run_math_eval
+    subprocess.run(cmd, cwd=QWEN_EVAL_DIR, check=True)
+  File "/leonardo/prod/spack/06/install/0.22/linux-rhel8-icelake/gcc-8.5.0/python-3.11.7-ziwh63aulhhzxksf42k5u3gnim2rbpmp/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/leonardo/home/userexternal/miacobel/project_new/mergenetic-venv/bin/python', 'math_eval.py', '--model_name_or_path', '/leonardo_scratch/fast/IscrC_M4R/miacobel/model/merged/Mergenetic-TA-RANDOM-14B', '--data_names', 'gsm8k', '--prompt_type', 'deepseek-math', '--max_tokens_per_call', '10240', '--num_test_sample', '20', '--n_sampling', '1', '--split', 'train', '--seed', '0', '--output_dir', '/leonardo/home/userexternal/miacobel/mergenetic/qwen_outputs/Mergenetic-TA-RANDOM-14B', '--save_outputs', '--overwrite', '--use_safetensors', '--use_vllm']' returned non-zero exit status 1.

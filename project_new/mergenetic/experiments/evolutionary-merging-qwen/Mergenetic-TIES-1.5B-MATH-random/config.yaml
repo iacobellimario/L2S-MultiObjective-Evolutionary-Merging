@@ -1,0 +1,11 @@
+base_model: /leonardo_scratch/fast/IscrC_LENS/miacobel/model/DeepSeek-R1-Distill-Qwen-1.5B
+dtype: bfloat16
+merge_method: ties
+models:
+- model: /leonardo_scratch/fast/IscrC_LENS/miacobel/model/DeepSeek-R1-Distill-Qwen-1.5B
+- model: /leonardo_scratch/fast/IscrC_LENS/miacobel/model/Qwen2.5-Math-1.5B
+  parameters:
+    density: 0.151215935857318
+    weight: 0.3096804127094848
+parameters:
+  int8_mask: true
