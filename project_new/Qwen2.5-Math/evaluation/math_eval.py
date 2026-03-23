@@ -113,7 +113,6 @@ def setup(args):
             disable_custom_all_reduce=True,
             pipeline_parallel_size=args.pipeline_parallel_size,
             trust_remote_code=True,
-            #kv_cache_dtype="fp8",
             gpu_memory_utilization=0.8,
             max_model_len=15000, 
         ) 
