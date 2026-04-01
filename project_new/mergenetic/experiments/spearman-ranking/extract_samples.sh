@@ -5,8 +5,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64GB
-#SBATCH --time=24:00:00
-#SBATCH --output=logs/extract_samples_1p5B_math%j.out
+#SBATCH --time=00:20:00
+#SBATCH --output=logs/extract_samples_1.5B_math%j.out
 
 cd /leonardo/home/userexternal/miacobel/project_new/mergenetic/experiments/spearman-ranking/
 

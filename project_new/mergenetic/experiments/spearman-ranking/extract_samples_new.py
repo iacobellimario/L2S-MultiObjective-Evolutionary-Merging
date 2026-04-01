@@ -7,6 +7,7 @@ import subprocess
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 from scipy.stats import spearmanr
 
 # pymoo components (kept as-is)
@@ -25,16 +26,19 @@ method_to_label = {
     "entropy": "Entropy",
 }
 
-# ==== Plot palette (requested) ====
+# ==== Plot palette ====
 METHOD_TO_COLOR = {
-    "entropy": "#1d90ff",
-    "random": "#1abc9d",
-    "disagreement": "#9b59b6",
+    "random": "#0F60BD",
+    "entropy": "#C62828",
+    "disagreement": "#05564A",
 }
 
 # ==== Set the seed and max number of evaluated samples ====
 SEED = 42
 NUM_SAMPLES = 1000
+
+PLOT_ALPHA = 0.9
+
 
 def parse_args():
     import argparse
@@ -218,7 +222,7 @@ def update_accuracies(performance_df, correctness_df, benchmarks, genotypes):
 
 
 # =========================================================
-# Sampling strategies (kept as-is logically)
+# Sampling strategies
 # =========================================================
 def get_random_sampled_indices(correctness_df, benchmarks, seed, sample_percent=0.01, score="score"):
     random.seed(seed)
@@ -274,7 +278,10 @@ def get_disagreement_sampled_indices(correctness_df, benchmarks, seed, sample_pe
             additional = random.sample(remaining, min(additional_needed, len(remaining)))
             sampled_idxes.extend(additional)
             if len(sampled_idxes) < sample_size:
-                print(f"Warning: Not enough indices for benchmark {benchmark}, sampled {len(sampled_idxes)} / {sample_size}")
+                print(
+                    f"Warning: Not enough indices for benchmark {benchmark}, "
+                    f"sampled {len(sampled_idxes)} / {sample_size}"
+                )
 
         all_sampled_idx[benchmark] = sampled_idxes
 
@@ -284,7 +291,7 @@ def get_disagreement_sampled_indices(correctness_df, benchmarks, seed, sample_pe
 def get_entropy_sampled_indices(correctness_df, benchmarks, seed, sample_percent=0.01, score="score"):
     """
     Entropy over Bernoulli correctness across genotypes.
-    (Logic kept the same as your code: we exclude 1 genotype randomly each run.)
+    Excludes 1 genotype randomly each run to add variance across folds.
     """
     random.seed(seed)
     all_sampled_idx = {}
@@ -324,7 +331,11 @@ def get_entropy_sampled_indices(correctness_df, benchmarks, seed, sample_percent
         high_entropy_indices = sorted(idxes, key=lambda x: entropy_dict[x], reverse=True)
 
         sample_size = max(1, int(sample_percent * len(idxes)))
-        sampled_idxes = high_entropy_indices[:sample_size] if len(high_entropy_indices) >= sample_size else high_entropy_indices
+        sampled_idxes = (
+            high_entropy_indices[:sample_size]
+            if len(high_entropy_indices) >= sample_size
+            else high_entropy_indices
+        )
 
         if len(sampled_idxes) < sample_size:
             remaining = [idx for idx in idxes if idx not in sampled_idxes]
@@ -361,8 +372,12 @@ def compute_sample_accuracies(performance_df, correctness_df, benchmarks, genoty
             sample_score = sub["score"].sum() / len(sampled_idxes)
             sample_mean_length = sub["answer_length"].sum() / len(sampled_idxes)
 
-            perf_df.loc[(perf_df["benchmark"] == benchmark) & (perf_df["genotype"] == genotype), "sample_acc"] = sample_score
-            perf_df.loc[(perf_df["benchmark"] == benchmark) & (perf_df["genotype"] == genotype), "sample_length"] = sample_mean_length
+            perf_df.loc[
+                (perf_df["benchmark"] == benchmark) & (perf_df["genotype"] == genotype), "sample_acc"
+            ] = sample_score
+            perf_df.loc[
+                (perf_df["benchmark"] == benchmark) & (perf_df["genotype"] == genotype), "sample_length"
+            ] = sample_mean_length
 
     return perf_df
 
@@ -410,8 +425,9 @@ def plot_spearman_vs_sampling(
     if sampling_methods is None:
         sampling_methods = {"random": get_random_sampled_indices}
 
-    # fixed sampling grid
+    # fixed sampling grid — precompute integer tick values once
     sample_percents = np.linspace(0.05, 1.0, 10)
+    tick_vals = (sample_percents * 100).round().astype(int)
 
     spearman_results_acc = {m: {b: [] for b in benchmarks} for m in sampling_methods}
     spearman_results_acc_for_len = {m: {b: [] for b in benchmarks} for m in sampling_methods}
@@ -495,7 +511,7 @@ def plot_spearman_vs_sampling(
                 spearman_results_acc_for_len[method_name][b].append(mean_ci(fold_corrs_acc_len[b]))
 
     # ----------------------------
-    # Plotting 
+    # Plotting
     # ----------------------------
     fig, axes = plt.subplots(
         nrows=len(benchmarks),
@@ -507,6 +523,8 @@ def plot_spearman_vs_sampling(
     # keep stable legend order
     plot_order = [m for m in ["entropy", "disagreement", "random"] if m in sampling_methods]
 
+    int_formatter = mticker.FuncFormatter(lambda x, _: f"{int(x)}")
+
     for i, b in enumerate(benchmarks):
         ax_acc = axes[i, 0]
         ax_len = axes[i, 1]
@@ -515,10 +533,9 @@ def plot_spearman_vs_sampling(
             color = METHOD_TO_COLOR.get(method_name, "black")
 
             means_acc = [spearman_results_acc[method_name][b][j][0] for j in range(len(sample_percents))]
-            cis_acc = [spearman_results_acc[method_name][b][j][1] for j in range(len(sample_percents))]
-
+            cis_acc   = [spearman_results_acc[method_name][b][j][1] for j in range(len(sample_percents))]
             means_len = [spearman_results_acc_for_len[method_name][b][j][0] for j in range(len(sample_percents))]
-            cis_len = [spearman_results_acc_for_len[method_name][b][j][1] for j in range(len(sample_percents))]
+            cis_len   = [spearman_results_acc_for_len[method_name][b][j][1] for j in range(len(sample_percents))]
 
             # collect table rows
             for j, sp in enumerate(sample_percents):
@@ -544,7 +561,7 @@ def plot_spearman_vs_sampling(
                 )
 
             ax_acc.errorbar(
-                sample_percents * 100,
+                tick_vals,
                 means_acc,
                 yerr=cis_acc,
                 marker="o",
@@ -555,11 +572,12 @@ def plot_spearman_vs_sampling(
                 capthick=1.2,
                 elinewidth=1.2,
                 color=color,
+                alpha=PLOT_ALPHA,
                 label=method_to_label.get(method_name, method_name),
             )
 
             ax_len.errorbar(
-                sample_percents * 100,
+                tick_vals,
                 means_len,
                 yerr=cis_len,
                 marker="o",
@@ -570,28 +588,24 @@ def plot_spearman_vs_sampling(
                 capthick=1.2,
                 elinewidth=1.2,
                 color=color,
+                alpha=PLOT_ALPHA,
                 label=method_to_label.get(method_name, method_name),
             )
 
-        ax_acc.set_title(f"Ranking by Accuracy")
-        ax_acc.set_xlabel("Sample Percentage (%)")
-        ax_acc.set_xticks(sample_percents*100) 
-        ax_acc.set_ylabel("Spearman Correlation")
-        ax_acc.set_ylim(-0.2, 1.2)
-        ax_acc.axhline(0.0, color="gray", linestyle="--", linewidth=0.8)
-        ax_acc.grid(True, linestyle=":", linewidth=0.6, alpha=0.6)
-        ax_acc.legend(loc="lower right")
+        for ax, title in (
+            (ax_acc, "Ranking by Accuracy"),
+            (ax_len, "Ranking by Length"),
+        ):
+            ax.set_title(title)
+            ax.set_xlabel("Sample Percentage (%)")
+            ax.set_xticks(tick_vals)
+            ax.xaxis.set_major_formatter(int_formatter)
+            ax.set_ylabel("Spearman Correlation")
+            ax.set_ylim(0.0, 1.2)
+            #ax.axhline(0.0, color="gray", linestyle="--", linewidth=0.8)
+            ax.grid(True, linestyle=":", linewidth=0.6, alpha=0.5)
+            ax.legend(loc="lower right")
 
-        ax_len.set_title(f"Ranking by Avg. Length")
-        ax_len.set_xlabel("Sample Percentage (%)")
-        ax_len.set_xticks(sample_percents*100) 
-        ax_len.set_ylabel("Spearman Correlation")
-        ax_len.set_ylim(-0.2, 1.2)
-        ax_len.axhline(0.0, color="gray", linestyle="--", linewidth=0.8)
-        ax_len.grid(True, linestyle=":", linewidth=0.6, alpha=0.6)
-        ax_len.legend(loc="lower right")
-
-    # FIX: save once per run_id (no 'b' out of scope)
     os.makedirs(plot_dir, exist_ok=True)
     plt.tight_layout()
     name = run_id if run_id is not None else "spearman"
@@ -628,21 +642,6 @@ def main():
     model_dir = "/leonardo_scratch/fast/IscrC_LENS/miacobel/model"
     os.makedirs(model_dir, exist_ok=True)
 
-    reasoning_repo = args.reasoning_model
-    qwen_math_repo = args.base_model
-
-    # (kept commented as you had it)
-    """
-    snapshot_download(
-        repo_id=reasoning_repo,
-        local_dir=os.path.join(model_dir, args.reasoning_model.split("/")[-1])
-    )
-    snapshot_download(
-        repo_id=qwen_math_repo,
-        local_dir=os.path.join(model_dir, args.base_model.split("/")[-1])
-    )
-    """
-
     config = ConfigLmEval()
     config.additional_templates_folder = os.path.join(PROJECT_ROOT, "project_new", "mergenetic", "lm_tasks")
     config.bench = args.task
@@ -655,8 +654,6 @@ def main():
     config.metric = "exact_match"
     config.task_type = "FG_MATH"
     config.path_to_store_merged_model = f"{model_dir}/merged"
-
-    
     config.base_model = f"{model_dir}/{args.reasoning_model.split('/')[-1]}"
     config.models = {"en": f"{model_dir}/{args.base_model.split('/')[-1]}"}
     config.eval_batch_size = 8
@@ -679,7 +676,7 @@ def main():
 
     genotypes = list(np.linspace(0.0, 1.0, num=args.num_genotypes))
 
-    # for each genotype in genotypes, create a merged model and evaluate it
+    # for each genotype, create a merged model and evaluate it
     for index, row in enumerate(genotypes):
         genotype = [row]
         print(f"Processing genotype {genotype} ({index+1}/{len(genotypes)})")
@@ -708,31 +705,20 @@ def main():
             [
                 "python3",
                 "../Qwen2.5-Math/evaluation/math_eval.py",
-                "--model_name_or_path",
-                f"{merged_model_path}",
-                "--data_names",
-                f"{args.task}",
-                "--output_dir",
-                f"{args.evaluation_dir}/{genotype[0]}",
-                "--prompt_type",
-                "deepseek-math",
-                "--n_sampling",
-                "1",
-                "--max_tokens_per_call",
-                "10240",
-                "--num_shots",
-                "0",
-                "--seed",
-                f"{SEED}",
-                "--split",
-                "test",
-                "--num_test_sample",
-                f"{NUM_SAMPLES}",
+                "--model_name_or_path", f"{merged_model_path}",
+                "--data_names", f"{args.task}",
+                "--output_dir", f"{args.evaluation_dir}/{genotype[0]}",
+                "--prompt_type", "deepseek-math",
+                "--n_sampling", "1",
+                "--max_tokens_per_call", "10240",
+                "--num_shots", "0",
+                "--seed", f"{SEED}",
+                "--split", "test",
+                "--num_test_sample", f"{NUM_SAMPLES}",
                 "--use_vllm",
                 "--save_outputs",
                 "--overwrite",
-                "--data_dir",
-                "../Qwen2.5-Math/evaluation/data",
+                "--data_dir", "../Qwen2.5-Math/evaluation/data",
             ],
             env={**os.environ},
             cwd=f"{PROJECT_ROOT}/project_new/mergenetic",
@@ -784,7 +770,7 @@ def main():
     # update performance_df 'accuracy' and add normalized 'mean_answer_length'
     performance_df = update_accuracies(performance_df, correctness_df, [args.task], genotypes)
 
-    # Compute Spearman + plots (run_id passed through, as requested)
+    # Compute Spearman + plots
     sp_results_acc, sp_results_len, sampled_ids, plot_data_df = plot_spearman_vs_sampling(
         performance_df,
         correctness_df,
@@ -802,7 +788,7 @@ def main():
         plot_dir="plots",
     )
 
-    # Export BOTH tables:
+    # Export both LaTeX tables
     export_spearman_table(
         plot_data_df,
         run_id=args.run_id,
